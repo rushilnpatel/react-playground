@@ -3,7 +3,7 @@ import { PersonList } from "./PersonsList";
 
 type GreetType = {
     name: string,
-    messageCount: number,
+    messageCount?: number,
     isLoggedIn: boolean
 }
 
@@ -19,10 +19,11 @@ const list = [
 ];
 
 export const Greet = (props: GreetType) => {
+    const { messageCount = 0 } = props;
     return (
         <>
             {props.isLoggedIn ? 
-                <p>Hello <Person first="John" last="Trust"></Person>, You have {props.messageCount} unread message.</p>
+                <p>Hello <Person first="John" last="Trust"></Person>, You have {messageCount} unread message.</p>
              :
               <p>Hello Guest</p>}
               <PersonList names={list}></PersonList>

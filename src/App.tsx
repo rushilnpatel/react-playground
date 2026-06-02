@@ -4,13 +4,24 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import { Greet } from './components/Greet'
+import { Status } from './components/Status'
+import { Heading } from './components/Heading'
+import { Rushil } from './components/Rushil'
+import { Control } from './components/Control'
+import { Container } from './components/Container'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Greet name='Rushil Patel' messageCount={20} isLoggedIn={true}></Greet>
+      <Greet name='Rushil Patel' isLoggedIn={true}></Greet>
+      <Status status='loading' ></Status>
+      <Rushil>
+        <Heading>Hello</Heading>
+      </Rushil>
+      <Control />
+      <Container styles={{border: '1px solid red', padding: '1 rem'}} />
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
