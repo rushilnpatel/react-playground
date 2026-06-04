@@ -9,6 +9,7 @@ import { Heading } from './components/Heading'
 import { Rushil } from './components/Rushil'
 import { Control } from './components/Control'
 import { Container } from './components/Container'
+import { User } from './components/state/User'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,9 @@ function App() {
       </Rushil>
       <Control />
       <Container styles={{border: '1px solid red', padding: '1 rem'}} />
+      
+      <User />
+      
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
