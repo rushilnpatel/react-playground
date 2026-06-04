@@ -10,6 +10,7 @@ import { Rushil } from './components/Rushil'
 import { Control } from './components/Control'
 import { Container } from './components/Container'
 import { User } from './components/state/User'
+import { Counter } from './components/state/Counter'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,10 @@ function App() {
       
       <User />
       
+    <section>
+      <Counter></Counter>
+    </section>
+
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
