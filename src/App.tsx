@@ -11,6 +11,9 @@ import { Control } from './components/Control'
 import { Container } from './components/Container'
 import { User } from './components/state/User'
 import { Counter } from './components/state/Counter'
+import { ThemeContextProvider } from './components/context/themeContext'
+import { Box } from './components/context/Box'
+import { UserContextProvider } from './components/context/UserContext'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,11 +28,20 @@ function App() {
       <Control />
       <Container styles={{border: '1px solid red', padding: '1 rem'}} />
       
-      <User />
+      {/* <User /> */}
       
     <section>
       <Counter></Counter>
     </section>
+
+    <ThemeContextProvider>
+      <Box></Box>
+    </ThemeContextProvider>
+
+    <UserContextProvider>
+      <User />
+    </UserContextProvider>
+
 
       <section id="center">
         <div className="hero">
